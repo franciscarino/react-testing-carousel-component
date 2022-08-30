@@ -1,13 +1,26 @@
 import { render, fireEvent } from "@testing-library/react";
 import Carousel from "./Carousel";
 import TEST_IMAGES from "./_testCommon.js";
+import photos from "./photos.js";
 
-it("works when you click on the right arrow", function() {
+//smoke test
+it("renders without crashing", function () {
+  render(
+    <Carousel photos={TEST_IMAGES} title="Shells from far-away beaches" />
+  );
+});
+
+//snapshot test
+it("matches snapshot", function () {
   const { container } = render(
-    <Carousel
-      photos={TEST_IMAGES}
-      title="images for testing"
-    />
+    <Carousel photos={TEST_IMAGES} title="Shells from far-away beaches" />
+  );
+  expect(container).toMatchSnapshot();
+});
+
+it("works when you click on the right arrow", function () {
+  const { container } = render(
+    <Carousel photos={TEST_IMAGES} title="images for testing" />
   );
   // expect the first image to show, but not the second
   expect(
