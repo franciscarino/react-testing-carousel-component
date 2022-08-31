@@ -1,8 +1,8 @@
 import { render, fireEvent } from "@testing-library/react";
 import Carousel from "./Carousel";
 import TEST_IMAGES from "./_testCommon.js";
-import photos from "./photos.js";
 
+//TODO: titles same all around
 //smoke test
 it("renders without crashing", function () {
   render(
@@ -42,3 +42,68 @@ it("works when you click on the right arrow", function () {
     container.querySelector('img[alt="testing image 2"]')
   ).toBeInTheDocument();
 });
+
+it("works when you click the left arrow", function () {
+  const { container } = render(
+    <Carousel photos={TEST_IMAGES} title="images for testing" />
+  );
+
+  // move forward in the carousel
+  const rightArrow = container.querySelector(".bi-arrow-right-circle");
+  fireEvent.click(rightArrow);
+  expect(
+    container.querySelector('img[alt="testing image 1"]')
+  ).not.toBeInTheDocument();
+  expect(
+    container.querySelector('img[alt="testing image 2"]')
+  ).toBeInTheDocument();
+
+  // move back in the carousel
+  const leftArrow = container.querySelector(".bi-arrow-left-circle");
+  fireEvent.click(leftArrow);
+
+  // expect the first image to show, but not the second
+  expect(
+    container.querySelector('img[alt="testing image 2"]')
+  ).not.toBeInTheDocument();
+  expect(
+    container.querySelector('img[alt="testing image 1"]')
+  ).toBeInTheDocument();
+});
+
+it("left arrow is hidden on photo 1", function(){
+  const { container, debug } = render (
+    <Carousel photos={TEST_IMAGES} title="images for testing" />
+  )
+
+  expect(container.querySelector('.bi.bi-arrow-left-circle')
+  ).not.toBeInTheDocument();
+  debug();
+  expect(
+    container.querySelector('.bi.bi-arrow-right-circle')
+  ).toBeInTheDocument();
+})
+
+it("right arrow is hidden on last photo", function(){
+  const { container, debug } = render (
+    <Carousel photos={TEST_IMAGES} title="images for testing" />
+  )
+
+  // move forward twice in the carousel
+  const rightArrow = container.querySelector(".bi-arrow-right-circle");
+  fireEvent.click(rightArrow);
+  fireEvent.click(rightArrow);
+
+  expect(
+    container.querySelector('img[alt="testing image 2"]')
+  ).not.toBeInTheDocument();
+  expect(
+    container.querySelector('img[alt="testing image 3"]')
+  ).toBeInTheDocument();
+
+  expect(container.querySelector('.bi.bi-arrow-right-circle')
+  ).not.toBeInTheDocument();
+
+})
+
+

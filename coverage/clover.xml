@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1661904676336" clover="3.2.0">
+  <project timestamp="1661904676336" name="All files">
+    <metrics statements="25" coveredstatements="10" conditionals="8" coveredconditionals="4" methods="7" coveredmethods="4" elements="40" coveredelements="18" complexity="0" loc="25" ncloc="25" packages="1" files="7" classes="7"/>
+    <file name="App.js" path="/Users/bills/Desktop/exercises/react-testing-carousel-component/src/App.js">
+      <metrics statements="3" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <line num="17" count="0" type="stmt"/>
+      <line num="18" count="0" type="stmt"/>
+      <line num="20" count="0" type="stmt"/>
+    </file>
+    <file name="Card.js" path="/Users/bills/Desktop/exercises/react-testing-carousel-component/src/Card.js">
+      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <line num="20" count="13" type="stmt"/>
+    </file>
+    <file name="Carousel.js" path="/Users/bills/Desktop/exercises/react-testing-carousel-component/src/Carousel.js">
+      <metrics statements="8" coveredstatements="8" conditionals="4" coveredconditionals="4" methods="3" coveredmethods="3"/>
+      <line num="18" count="11" type="stmt"/>
+      <line num="20" count="11" type="stmt"/>
+      <line num="21" count="11" type="stmt"/>
+      <line num="25" count="4" type="stmt"/>
+      <line num="29" count="1" type="stmt"/>
+      <line num="33" count="11" type="cond" truecount="2" falsecount="0"/>
+      <line num="34" count="11" type="cond" truecount="2" falsecount="0"/>
+      <line num="37" count="11" type="stmt"/>
+    </file>
+    <file name="_testCommon.js" path="/Users/bills/Desktop/exercises/react-testing-carousel-component/src/_testCommon.js">
+      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <line num="1" count="2" type="stmt"/>
+    </file>
+    <file name="index.js" path="/Users/bills/Desktop/exercises/react-testing-carousel-component/src/index.js">
+      <metrics statements="3" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <line num="8" count="0" type="stmt"/>
+      <line num="9" count="0" type="stmt"/>
+      <line num="18" count="0" type="stmt"/>
+    </file>
+    <file name="photos.js" path="/Users/bills/Desktop/exercises/react-testing-carousel-component/src/photos.js">
+      <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <line num="5" count="0" type="stmt"/>
+    </file>
+    <file name="reportWebVitals.js" path="/Users/bills/Desktop/exercises/react-testing-carousel-component/src/reportWebVitals.js">
+      <metrics statements="8" coveredstatements="0" conditionals="4" coveredconditionals="0" methods="2" coveredmethods="0"/>
+      <line num="1" count="0" type="stmt"/>
+      <line num="2" count="0" type="cond" truecount="0" falsecount="4"/>
+      <line num="3" count="0" type="stmt"/>
+      <line num="4" count="0" type="stmt"/>
+      <line num="5" count="0" type="stmt"/>
+      <line num="6" count="0" type="stmt"/>
+      <line num="7" count="0" type="stmt"/>
+      <line num="8" count="0" type="stmt"/>
+    </file>
+  </project>
+</coverage>
