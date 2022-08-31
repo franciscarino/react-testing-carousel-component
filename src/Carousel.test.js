@@ -2,18 +2,18 @@ import { render, fireEvent } from "@testing-library/react";
 import Carousel from "./Carousel";
 import TEST_IMAGES from "./_testCommon.js";
 
-//TODO: titles same all around
+
 //smoke test
 it("renders without crashing", function () {
   render(
-    <Carousel photos={TEST_IMAGES} title="Shells from far-away beaches" />
+    <Carousel photos={TEST_IMAGES} title="images for testing" />
   );
 });
 
 //snapshot test
 it("matches snapshot", function () {
   const { container } = render(
-    <Carousel photos={TEST_IMAGES} title="Shells from far-away beaches" />
+    <Carousel photos={TEST_IMAGES} title="images for testing" />
   );
   expect(container).toMatchSnapshot();
 });
@@ -78,7 +78,7 @@ it("left arrow is hidden on photo 1", function(){
 
   expect(container.querySelector('.bi.bi-arrow-left-circle')
   ).not.toBeInTheDocument();
-  debug();
+
   expect(
     container.querySelector('.bi.bi-arrow-right-circle')
   ).toBeInTheDocument();
